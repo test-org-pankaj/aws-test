@@ -1,0 +1,25 @@
+{
+	"terrascanConfig": {
+		"local_file": [
+			{
+				"id": "local_file.web-access",
+				"name": "web-access",
+				"module_name": "root",
+				"source": "main.tf",
+				"line": 33,
+				"type": "local_file",
+				"config": {
+					"content": "{\n  \"fqdn\": \"${module.network.elb_url}\"\n}\n",
+					"filename": "./web-access.json"
+				},
+				"skip_rules": null,
+				"max_severity": "",
+				"min_severity": ""
+			}
+		]
+	},
+	"iacMetadata": {
+		"iacType": "terraform",
+		"iacPath": "terraform/aws/main.tf"
+	}
+}

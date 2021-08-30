@@ -1,0 +1,16 @@
+{
+	"name": "policyName1",
+	"file": "NASIRR_PROVIDER_0000.rego",
+	"policy_type": "PROVIDER",
+	"resource_type": "local_file",
+	"template_args": {
+		"name": "policyName1",
+		"prefix": "",
+		"suffix": ""
+	},
+	"severity": "LOW",
+	"description": "testing policy generation",
+	"category": "security",
+	"version": 1,
+	"id": "NASIRR_PROVIDER_0000"
+}
