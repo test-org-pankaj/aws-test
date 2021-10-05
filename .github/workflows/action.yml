@@ -14,7 +14,7 @@ jobs:
         #iac_type: 'terraform'
         #iac_version: 'v14'
         #policy_type: 'aws'
-        only_warn: true
+        only_warn: false
         #find_vulnerabilities: true 
         #sarif_upload: true
         #iac_dir:
