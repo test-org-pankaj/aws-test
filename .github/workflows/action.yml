@@ -20,4 +20,4 @@ jobs:
         #iac_dir:
         #policy_path:
         #skip_rules:
-        #config_path:
+        config_path: ./config.yml
