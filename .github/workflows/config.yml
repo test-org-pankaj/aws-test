@@ -1,6 +1,0 @@
-notifications:
-  webhook:
-    type: webhook
-    config:
-      url: https://devenv.accurics.com/v1/api/terrascan
-      token: 65612ca7-60e0-4461-9558-ea9bacf83bb5
