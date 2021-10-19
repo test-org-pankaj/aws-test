@@ -21,3 +21,5 @@ jobs:
         #policy_path:
         #skip_rules:
         #config_path: config.yml
+        #webhook_url:
+        #webhook_token:
