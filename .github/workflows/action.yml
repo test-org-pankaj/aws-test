@@ -9,7 +9,7 @@ jobs:
       uses: actions/checkout@v2
     - name: Run Terrascan
       id: terrascan
-      uses: docker://nasirrabbani/terrascan-action:2388f5e
+      uses: docker://nasirrabbani/terrascan-action:test4
       with:
         #iac_type: 'terraform'
         #iac_version: 'v14'
