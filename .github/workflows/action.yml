@@ -9,7 +9,7 @@ jobs:
       uses: actions/checkout@v2
     - name: Run Terrascan
       id: terrascan
-      uses: nasir-rabbani/terrascan-action@v2
+      uses: nasir-rabbani/terrascan-action@v3
       with:
 #         iac_type: 'terraform'
 #         iac_version: 'v14'
