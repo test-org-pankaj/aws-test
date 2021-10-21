@@ -9,20 +9,17 @@ jobs:
       uses: actions/checkout@v2
     - name: Run Terrascan
       id: terrascan
-      uses: nasir-rabbani/terrascan-action@v3.0.0
+      uses: docker://nasirrabbani/terrascan-action:test4
       with:
-#         iac_type: 'terraform'
-#         iac_version: 'v14'
-#         policy_type: 'aws'
-        only_warn: true
-        #scm_token: ${{ secrets.ACCESS_TOKEN }}
-        #verbose: true
+        #iac_type: 'terraform'
+        #iac_version: 'v14'
+        #policy_type: 'aws'
+        only_warn: false
+        #find_vulnerabilities: true 
         #sarif_upload: true
-        #non_recursive:
-        #iac_dir:
+        #iac_dir: ./modules/compute/
         #policy_path:
         #skip_rules:
-        #config_path:
-        #find_vulnerabilities:
-        #notification_webhook_url:
-        #notification_webhook_token:
+        #config_path: config.yml
+        #webhook_url:
+        #webhook_token:
