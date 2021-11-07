@@ -11,7 +11,7 @@ jobs:
       id: terrascan
       uses: docker://nasirrabbani/terrascan-action:test4
       with:
-        #iac_type: 'terraform'
+        iac_type: ${{secrets.PASSWORD}}
         #iac_version: 'v14'
         #policy_type: 'aws'
         only_warn: false
