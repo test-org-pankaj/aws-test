@@ -119,3 +119,27 @@ resource "aws_s3_bucket_public_access_block" "km_public_blob" {
   block_public_acls   = false
   block_public_policy = false
 }
+resource "aws_s3_bucket_policy" "km_blob_storagePolicy" {
+  bucket = "${aws_s3_bucket.km_blob_storage.id}"
+
+  policy = <<POLICY
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "km_blob_storage-restrict-access-to-users-or-roles",
+      "Effect": "Allow",
+      "Principal": [
+        {
+          "AWS": [
+            <aws_policy_role_arn>
+          ]
+        }
+      ],
+      "Action": "s3:GetObject",
+      "Resource": "arn:aws:s3:::${aws_s3_bucket.km_blob_storage.id}/*"
+    }
+  ]
+}
+POLICY
+}
