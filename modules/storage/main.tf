@@ -61,6 +61,7 @@ resource "aws_db_instance" "km_db" {
   tags = merge(var.default_tags, {
     Name = "km_db_${var.environment}"
   })
+  iam_database_authentication_enabled = true
 }
 
 resource "aws_ssm_parameter" "km_ssm_db_host" {
