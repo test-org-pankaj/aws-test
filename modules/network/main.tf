@@ -165,14 +165,14 @@ resource "aws_lb_target_group" "km_lb_target" {
   protocol    = "HTTP"
   vpc_id      = aws_vpc.km_vpc.id
   target_type = "ip"
-  depends_on = [ aws_lb.km_lb ]
+  depends_on  = [aws_lb.km_lb]
 }
 
 # Redirect all traffic from the ALB to the target group
 resource "aws_lb_listener" "km_frontend_listener" {
   load_balancer_arn = aws_lb.km_lb.arn
   port              = "80"
-  protocol          = "HTTP"
+  protocol          = "HTTPS"
   default_action {
     target_group_arn = aws_lb_target_group.km_lb_target.arn
     type             = "forward"
